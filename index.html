@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVE CURUPIRA - 30 de Agosto 2025 | São Paulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__brand">
+                <h1 class="logo">RAVE CURUPIRA</h1>
+            </div>
+            <ul class="nav__menu">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#lineup" class="nav__link">Line-up</a></li>
+                <li><a href="#ingressos" class="nav__link">Ingressos</a></li>
+                <li><a href="#informacoes" class="nav__link">Informações</a></li>
+                <li><a href="#contato" class="nav__link">Contato</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Floating Buy Button -->
+    <button class="floating-btn" onclick="scrollToSection('ingressos')">
+        COMPRAR INGRESSOS
+    </button>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">RAVE CURUPIRA</h1>
+            <p class="hero__subtitle">A MAIOR FESTA ELETRÔNICA BRASILEIRA</p>
+            <div class="hero__info">
+                <div class="hero__date">
+                    <span class="hero__day">SÁBADO</span>
+                    <span class="hero__number">30</span>
+                    <span class="hero__month">AGOSTO 2025</span>
+                </div>
+                <div class="hero__location">
+                    <span>COMPLEXO INDUSTRIAL</span>
+                    <span>SÃO PAULO - SP</span>
+                </div>
+            </div>
+            <div class="countdown" id="countdown">
+                <div class="countdown__item">
+                    <span class="countdown__number" id="days">00</span>
+                    <span class="countdown__label">DIAS</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="hours">00</span>
+                    <span class="countdown__label">HORAS</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="minutes">00</span>
+                    <span class="countdown__label">MIN</span>
+                </div>
+                <div class="countdown__item">
+                    <span class="countdown__number" id="seconds">00</span>
+                    <span class="countdown__label">SEG</span>
+                </div>
+            </div>
+            <button class="btn btn--primary btn--lg hero__cta" onclick="scrollToSection('ingressos')">
+                GARANTIR INGRESSO
+            </button>
+        </div>
+        <div class="hero__visual">
+            <div class="wave-animation"></div>
+            <div class="neon-circle"></div>
+            <div class="grid-overlay"></div>
+        </div>
+    </section>
+
+    <!-- Line-up Section -->
+    <section id="lineup" class="lineup">
+        <div class="container">
+            <h2 class="section-title">LINE-UP</h2>
+            <p class="section-subtitle">Os melhores DJs brasileiros de São Paulo</p>
+            <div class="djs-grid">
+                <div class="dj-card" onclick="openDJModal('blancah')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">BH</div>
+                    </div>
+                    <h3 class="dj-card__name">BLANCAh/HARPIA</h3>
+                    <p class="dj-card__style">Techno Experimental</p>
+                    <p class="dj-card__time">02:00 - 04:00</p>
+                </div>
+                
+                <div class="dj-card" onclick="openDJModal('cashu')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">CA</div>
+                    </div>
+                    <h3 class="dj-card__name">Cashu</h3>
+                    <p class="dj-card__style">Techno / Bass Music</p>
+                    <p class="dj-card__time">00:00 - 02:00</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('lucio')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">L_</div>
+                    </div>
+                    <h3 class="dj-card__name">L_cio</h3>
+                    <p class="dj-card__style">Techno Experimental</p>
+                    <p class="dj-card__time">22:00 - 00:00</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('mochakk')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">MK</div>
+                    </div>
+                    <h3 class="dj-card__name">Mochakk</h3>
+                    <p class="dj-card__style">Techno Hipnótico</p>
+                    <p class="dj-card__time">04:00 - 06:00</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('victor')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">VL</div>
+                    </div>
+                    <h3 class="dj-card__name">Victor Lou</h3>
+                    <p class="dj-card__style">Tech House / Best House</p>
+                    <p class="dj-card__time">20:00 - 22:00</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('antdot')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">AD</div>
+                    </div>
+                    <h3 class="dj-card__name">Antdot</h3>
+                    <p class="dj-card__style">Progressive / Melodic House</p>
+                    <p class="dj-card__time">21:00 - 22:30</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('gbr')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">GB</div>
+                    </div>
+                    <h3 class="dj-card__name">DJ GBR</h3>
+                    <p class="dj-card__style">Funk-Rave</p>
+                    <p class="dj-card__time">23:00 - 00:30</p>
+                </div>
+
+                <div class="dj-card" onclick="openDJModal('vintage')">
+                    <div class="dj-card__image">
+                        <div class="dj-card__placeholder">VC</div>
+                    </div>
+                    <h3 class="dj-card__name">Vintage Culture</h3>
+                    <p class="dj-card__style">House / Techno Melódico</p>
+                    <p class="dj-card__time">01:00 - 03:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="ingressos" class="tickets">
+        <div class="container">
+            <h2 class="section-title">INGRESSOS</h2>
+            <p class="section-subtitle">Escolha sua experiência na Rave Curupira</p>
+            <div class="tickets-grid">
+                <div class="ticket-card">
+                    <h3 class="ticket-card__type">PISTA</h3>
+                    <div class="ticket-card__prices">
+                        <div class="price-item">
+                            <span class="price-label">1º Lote</span>
+                            <span class="price-value">R$ 80</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">2º Lote</span>
+                            <span class="price-value">R$ 95</span>
+                        </div>
+                        <div class="price-item active">
+                            <span class="price-label">Último Lote</span>
+                            <span class="price-value">R$ 110</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-card__includes">
+                        <li>Acesso à pista principal</li>
+                        <li>Bar/restaurante</li>
+                        <li>Área fumantes</li>
+                    </ul>
+                    <button class="btn btn--primary btn--full-width" onclick="buyTicket('pista')">
+                        COMPRAR AGORA
+                    </button>
+                </div>
+
+                <div class="ticket-card ticket-card--featured">
+                    <div class="ticket-card__badge">MAIS VENDIDO</div>
+                    <h3 class="ticket-card__type">VIP</h3>
+                    <div class="ticket-card__prices">
+                        <div class="price-item">
+                            <span class="price-label">1º Lote</span>
+                            <span class="price-value">R$ 150</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">2º Lote</span>
+                            <span class="price-value">R$ 180</span>
+                        </div>
+                        <div class="price-item active">
+                            <span class="price-label">Último Lote</span>
+                            <span class="price-value">R$ 220</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-card__includes">
+                        <li>Acesso VIP elevado</li>
+                        <li>Bar exclusivo</li>
+                        <li>Banheiros privativos</li>
+                        <li>Fast track entrada</li>
+                    </ul>
+                    <button class="btn btn--primary btn--full-width" onclick="buyTicket('vip')">
+                        COMPRAR AGORA
+                    </button>
+                </div>
+
+                <div class="ticket-card">
+                    <h3 class="ticket-card__type">CAMAROTE</h3>
+                    <div class="ticket-card__prices">
+                        <div class="price-item">
+                            <span class="price-label">1º Lote</span>
+                            <span class="price-value">R$ 250</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">2º Lote</span>
+                            <span class="price-value">R$ 280</span>
+                        </div>
+                        <div class="price-item active">
+                            <span class="price-label">Último Lote</span>
+                            <span class="price-value">R$ 320</span>
+                        </div>
+                    </div>
+                    <ul class="ticket-card__includes">
+                        <li>Camarote privativo</li>
+                        <li>Open bar premium</li>
+                        <li>Serviço de mesa</li>
+                        <li>Vista privilegiada</li>
+                        <li>Entrada VIP</li>
+                    </ul>
+                    <button class="btn btn--primary btn--full-width" onclick="buyTicket('camarote')">
+                        COMPRAR AGORA
+                    </button>
+                </div>
+            </div>
+            <p class="tickets__disclaimer">
+                * Valores não incluem taxas da plataforma. Sujeito à disponibilidade.
+            </p>
+        </div>
+    </section>
+
+    <!-- Informações Section -->
+    <section id="informacoes" class="info">
+        <div class="container">
+            <h2 class="section-title">INFORMAÇÕES</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Data e Horário</h3>
+                    <p><strong>Sábado, 30 de Agosto de 2025</strong></p>
+                    <p>Das 20h às 06h</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Local</h3>
+                    <p><strong>Complexo Industrial São Paulo</strong></p>
+                    <p>Rua das Indústrias, 1500<br>Vila Madalena, São Paulo - SP</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Classificação</h3>
+                    <p><strong>+18 anos</strong></p>
+                    <p>Documento original obrigatório</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>O que levar</h3>
+                    <ul>
+                        <li>Documento original com foto</li>
+                        <li>Comprovante de vacinação</li>
+                        <li>Dinheiro para consumação</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Não permitido</h3>
+                    <ul>
+                        <li>Bebidas e alimentos externos</li>
+                        <li>Objetos de vidro</li>
+                        <li>Câmeras profissionais</li>
+                        <li>Substâncias ilícitas</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Transporte</h3>
+                    <p><strong>Estacionamento:</strong> R$ 25,00</p>
+                    <p><strong>Metrô:</strong> Estação Vila Madalena (Linha 2-Verde) + 10min caminhada</p>
+                    <p><strong>Uber/99:</strong> Ponto de embarque exclusivo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTATO</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Dúvidas sobre o evento?</h3>
+                    <p>Entre em contato conosco</p>
+                    <div class="contact-item">
+                        <strong>WhatsApp:</strong> (11) 99999-9999
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> contato@ravecurupira.com.br
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horário de atendimento:</strong><br>
+                        Segunda a Sexta: 9h às 18h
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label class="form-label">Nome</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Assunto</label>
+                        <select class="form-control">
+                            <option>Ingressos</option>
+                            <option>Line-up</option>
+                            <option>Localização</option>
+                            <option>Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensagem</label>
+                        <textarea class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">ENVIAR MENSAGEM</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RAVE CURUPIRA</h3>
+                    <p>A maior festa eletrônica brasileira de São Paulo</p>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">TikTok</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Úteis</h4>
+                    <ul>
+                        <li><a href="#lineup">Line-up</a></li>
+                        <li><a href="#ingressos">Ingressos</a></li>
+                        <li><a href="#informacoes">Informações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Parceiros</h4>
+                    <ul>
+                        <li>Complexo Industrial SP</li>
+                        <li>Som & Luz Eventos</li>
+                        <li>Security Pro</li>
+                        <li>Food Trucks SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rave Curupira. Todos os direitos reservados.</p>
+                <p>Desenvolvido com energia eletrônica e folclore brasileiro.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DJ Modal -->
+    <div id="djModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeDJModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalDjName"></h2>
+                <p id="modalDjStyle"></p>
+                <p id="modalDjTime"></p>
+            </div>
+            <div class="modal-body">
+                <p id="modalDjDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
